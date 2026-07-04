@@ -1,0 +1,35 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 300 360" width="100%" height="100%" style="background-color: #EAE3D9;">
+  <defs>
+    <pattern id="grid4" width="15" height="15" patternUnits="userSpaceOnUse">
+      <path d="M 15 0 L 0 0 0 15" fill="none" stroke="#543A20" stroke-width="0.5" stroke-opacity="0.08"/>
+    </pattern>
+  </defs>
+  <rect width="100%" height="100%" fill="#EAE3D9"/>
+  <rect width="100%" height="100%" fill="url(#grid4)"/>
+
+  <!-- Trophy Cup -->
+  <g transform="translate(150, 160)">
+    <!-- Base -->
+    <rect x="-40" y="80" width="80" height="15" fill="#543A20" rx="3"/>
+    <rect x="-20" y="60" width="40" height="20" fill="#543A20"/>
+
+    <!-- Handles -->
+    <path d="M -40,-20 C -70,-20 -60,30 -30,30" fill="none" stroke="#543A20" stroke-width="4" stroke-linecap="round"/>
+    <path d="M 40,-20 C 70,-20 60,30 30,30" fill="none" stroke="#543A20" stroke-width="4" stroke-linecap="round"/>
+
+    <!-- Main Cup -->
+    <path d="M -40,-40 L 40,-40 C 40,20 25,60 0,60 C -25,60 -40,20 -40,-40 Z" fill="#543A20"/>
+
+    <!-- Star on Cup -->
+    <path d="M 0,-15 L 4,-5 L 14,-5 L 6,1 L 9,11 L 0,5 L -9,11 L -6,1 L -14,-5 L -4,-5 Z" fill="#FFFFFF"/>
+
+    <!-- Glowing circles -->
+    <circle cx="-70" cy="-60" r="15" fill="#DEDBE6" opacity="0.6"/>
+    <circle cx="70" cy="-50" r="25" fill="#DEDBE6" opacity="0.4"/>
+  </g>
+
+  <!-- Award Label -->
+  <text x="150" y="300" font-family="Gantari, sans-serif" font-weight="bold" font-size="16" fill="#543A20" text-anchor="middle">YUKTA HACKATHON</text>
+  <text x="150" y="318" font-family="Poppins, sans-serif" font-size="11" fill="#543A20" opacity="0.8" text-anchor="middle">2nd Prize Award Winner</text>
+  <text x="150" y="332" font-family="Poppins, sans-serif" font-size="9" fill="#543A20" opacity="0.6" text-anchor="middle">PSG iTech, Coimbatore</text>
+</svg>

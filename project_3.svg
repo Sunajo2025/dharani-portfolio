@@ -1,0 +1,39 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 400 300" width="100%" height="100%" style="background-color: #F7F7F2;">
+  <defs>
+    <pattern id="grid3" width="20" height="20" patternUnits="userSpaceOnUse">
+      <path d="M 20 0 L 0 0 0 20" fill="none" stroke="#543A20" stroke-width="0.5" stroke-opacity="0.08"/>
+    </pattern>
+  </defs>
+  <rect width="100%" height="100%" fill="#F7F7F2"/>
+  <rect width="100%" height="100%" fill="url(#grid3)"/>
+
+  <!-- Team/Collaboration Nodes -->
+  <g transform="translate(80, 150)">
+    <line x1="0" y1="0" x2="60" y2="-40" stroke="#543A20" stroke-width="1.5"/>
+    <line x1="0" y1="0" x2="60" y2="40" stroke="#543A20" stroke-width="1.5"/>
+    <circle cx="0" cy="0" r="16" fill="#DEDBE6" stroke="#543A20" stroke-width="1.5"/>
+    <text x="-12" y="4" font-family="Poppins, sans-serif" font-weight="bold" font-size="10" fill="#543A20">ME</text>
+
+    <!-- Node 2 -->
+    <circle cx="60" cy="-40" r="12" fill="#EAE3D9" stroke="#543A20" stroke-width="1.5"/>
+    <circle cx="60" cy="40" r="12" fill="#EAE3D9" stroke="#543A20" stroke-width="1.5"/>
+  </g>
+
+  <!-- Big 2nd Place / Award Graphic in Center/Right -->
+  <g transform="translate(260, 140)">
+    <!-- Award Badge -->
+    <path d="M -40,-40 L 40,-40 L 40,30 L 0,60 L -40,30 Z" fill="#543A20"/>
+    <circle cx="0" cy="-10" r="22" fill="#EAE3D9"/>
+    <text x="-6" y="2" font-family="Gantari, sans-serif" font-weight="bold" font-size="20" fill="#543A20">2</text>
+    <text x="-9" y="12" font-family="Poppins, sans-serif" font-size="6" fill="#543A20" letter-spacing="1">PRIZE</text>
+
+    <text x="-62" y="80" font-family="Gantari, sans-serif" font-weight="bold" font-size="12" fill="#543A20">YUKTA HACKATHON</text>
+    <text x="-52" y="94" font-family="Poppins, sans-serif" font-size="8" fill="#543A20" opacity="0.7">PSG iTech, Coimbatore</text>
+  </g>
+
+  <!-- Graph / AI Detection stats -->
+  <rect x="40" y="30" width="100" height="50" rx="6" fill="#FFFFFF" stroke="#543A20" stroke-width="1.5"/>
+  <path d="M 50,70 L 70,55 L 90,60 L 110,42 L 130,48" fill="none" stroke="#543A20" stroke-width="2"/>
+  <circle cx="110" cy="42" r="3" fill="#DEDBE6" stroke="#543A20" stroke-width="1"/>
+  <text x="18" y="22" font-family="Poppins, sans-serif" font-size="7" fill="#543A20" font-weight="bold">AI Image Detection</text>
+</svg>

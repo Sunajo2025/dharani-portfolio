@@ -1,0 +1,44 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 400 300" width="100%" height="100%" style="background-color: #DEDBE6;">
+  <defs>
+    <pattern id="grid2" width="20" height="20" patternUnits="userSpaceOnUse">
+      <path d="M 20 0 L 0 0 0 20" fill="none" stroke="#543A20" stroke-width="0.5" stroke-opacity="0.08"/>
+    </pattern>
+  </defs>
+  <rect width="100%" height="100%" fill="#DEDBE6"/>
+  <rect width="100%" height="100%" fill="url(#grid2)"/>
+
+  <!-- Scanned Video Frame -->
+  <rect x="60" y="50" width="280" height="200" rx="10" fill="#F7F7F2" stroke="#543A20" stroke-width="2"/>
+
+  <!-- Scanning Line -->
+  <line x1="60" y1="130" x2="340" y2="130" stroke="#543A20" stroke-width="2" stroke-dasharray="5,3"/>
+  <rect x="58" y="126" width="6" height="8" rx="2" fill="#543A20"/>
+  <rect x="336" y="126" width="6" height="8" rx="2" fill="#543A20"/>
+
+  <!-- Left Side: Real Face Silhouette / Data -->
+  <g transform="translate(130, 150)">
+    <circle cx="0" cy="-10" r="30" fill="none" stroke="#543A20" stroke-width="1.5"/>
+    <path d="M -15,15 Q 0,0 15,15" fill="none" stroke="#543A20" stroke-width="1.5"/>
+    <text x="-27" y="45" font-family="Poppins, sans-serif" font-size="9" fill="#543A20" font-weight="bold" opacity="0.6">REAL FRAME</text>
+  </g>
+
+  <!-- Divider inside screen -->
+  <line x1="200" y1="50" x2="200" y2="250" stroke="#543A20" stroke-width="1" stroke-dasharray="2,2"/>
+
+  <!-- Right Side: Deepfake Glitched Face / Artifacts -->
+  <g transform="translate(270, 150)">
+    <!-- Glitched face silhouette -->
+    <circle cx="0" cy="-10" r="30" fill="none" stroke="#543A20" stroke-width="1.5" stroke-dasharray="8,4"/>
+    <rect x="-10" y="-25" width="20" height="8" fill="#DEDBE6" stroke="#543A20" stroke-width="1" opacity="0.8"/>
+    <!-- Glitch path -->
+    <path d="M -12,18 L -3,10 L 5,20 L 15,12" fill="none" stroke="#543A20" stroke-width="1.5"/>
+    <text x="-32" y="45" font-family="Poppins, sans-serif" font-size="9" fill="#543A20" font-weight="bold">FAKE DETECTED</text>
+  </g>
+
+  <!-- Classification Labels -->
+  <rect x="75" y="65" width="70" height="18" rx="4" fill="#EAE3D9" stroke="#543A20" stroke-width="1"/>
+  <text x="83" y="77" font-family="Poppins, sans-serif" font-size="8" fill="#543A20">Education</text>
+
+  <rect x="255" y="65" width="70" height="18" rx="4" fill="#543A20"/>
+  <text x="264" y="77" font-family="Poppins, sans-serif" font-size="8" fill="#FFFFFF">Deepfake 99%</text>
+</svg>

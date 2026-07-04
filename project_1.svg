@@ -1,0 +1,52 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 400 300" width="100%" height="100%" style="background-color: #EAE3D9;">
+  <defs>
+    <pattern id="grid" width="20" height="20" patternUnits="userSpaceOnUse">
+      <path d="M 20 0 L 0 0 0 20" fill="none" stroke="#543A20" stroke-width="0.5" stroke-opacity="0.08"/>
+    </pattern>
+  </defs>
+  <rect width="100%" height="100%" fill="#EAE3D9"/>
+  <rect width="100%" height="100%" fill="url(#grid)"/>
+
+  <!-- Radial gradient glow in center -->
+  <circle cx="200" cy="150" r="120" fill="#DEDBE6" opacity="0.4" />
+
+  <!-- Dotted path loops representing recommendation matches -->
+  <path d="M 80,150 Q 140,80 200,150 T 320,150" fill="none" stroke="#543A20" stroke-width="1.5" stroke-dasharray="4,4" stroke-opacity="0.6"/>
+  <path d="M 80,150 Q 140,220 200,150 T 320,150" fill="none" stroke="#543A20" stroke-width="1.5" stroke-dasharray="4,4" stroke-opacity="0.6"/>
+
+  <!-- Main Node (Resume/User) -->
+  <circle cx="80" cy="150" r="16" fill="#543A20"/>
+  <circle cx="80" cy="150" r="24" fill="none" stroke="#543A20" stroke-width="1" stroke-opacity="0.4"/>
+  <path d="M 76,145 H 84 M 76,150 H 84 M 76,155 H 81" stroke="#FFFFFF" stroke-width="1.5" stroke-linecap="round"/>
+
+  <!-- Center Matching Engine (AI Hub) -->
+  <rect x="175" y="125" width="50" height="50" rx="8" fill="#FFFFFF" stroke="#543A20" stroke-width="2"/>
+  <circle cx="200" cy="150" r="12" fill="#DEDBE6"/>
+  <!-- Sparkle/AI icon -->
+  <path d="M 200,144 L 202,148 L 206,150 L 202,152 L 200,156 L 198,152 L 194,150 L 198,148 Z" fill="#543A20"/>
+
+  <!-- Internship Nodes (Target Recommendations) -->
+  <g transform="translate(320, 90)">
+    <circle cx="0" cy="0" r="12" fill="#FFFFFF" stroke="#543A20" stroke-width="1.5"/>
+    <path d="M -5,0 L 5,0 M 0,-5 L 0,5" stroke="#543A20" stroke-width="1.5"/>
+    <text x="20" y="4" font-family="Poppins, sans-serif" font-size="10" fill="#543A20" font-weight="bold">Match A [98%]</text>
+  </g>
+  <g transform="translate(320, 150)">
+    <circle cx="0" cy="0" r="12" fill="#FFFFFF" stroke="#543A20" stroke-width="1.5"/>
+    <path d="M -5,0 L 5,0 M 0,-5 L 0,5" stroke="#543A20" stroke-width="1.5"/>
+    <text x="20" y="4" font-family="Poppins, sans-serif" font-size="10" fill="#543A20" font-weight="bold">Match B [92%]</text>
+  </g>
+  <g transform="translate(320, 210)">
+    <circle cx="0" cy="0" r="12" fill="#FFFFFF" stroke="#543A20" stroke-width="1.5"/>
+    <path d="M -5,0 L 5,0 M 0,-5 L 0,5" stroke="#543A20" stroke-width="1.5"/>
+    <text x="20" y="4" font-family="Poppins, sans-serif" font-size="10" fill="#543A20" font-weight="bold">Match C [85%]</text>
+  </g>
+
+  <!-- Connective lines from engine to targets -->
+  <line x1="225" y1="140" x2="308" y2="95" stroke="#543A20" stroke-width="1.5"/>
+  <line x1="225" y1="150" x2="308" y2="150" stroke="#543A20" stroke-width="1.5"/>
+  <line x1="225" y1="160" x2="308" y2="205" stroke="#543A20" stroke-width="1.5"/>
+
+  <!-- Connection from User to Engine -->
+  <line x1="104" y1="150" x2="175" y2="150" stroke="#543A20" stroke-width="2"/>
+</svg>
