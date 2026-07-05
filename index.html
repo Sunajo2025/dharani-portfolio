@@ -716,7 +716,7 @@
             <!-- Slide 1: Hackathon Prize -->
             <div class="feedback-slide min-w-full grid grid-cols-1 lg:grid-cols-[1.2fr_0.8fr] gap-8 lg:gap-16 items-start lg:items-center">
               <!-- Left Text -->
-              <div class="max-w-2xl relative pt-8 sm:pt-12 lg:pt-16 pl-8 sm:pl-12 lg:pl-16">
+              <div class="max-w-2xl relative pt-6 sm:pt-8 lg:pt-12 pl-4 sm:pl-8 lg:pl-16">
                 <div class="relative inline-block w-full">
                   <!-- Opening Quote -->
                   <span class="absolute -top-14 -left-14 text-[120px] leading-none text-primary/20 z-20 pointer-events-none">
@@ -738,7 +738,7 @@
 
               <!-- Right Image -->
               <div class="flex justify-end">
-                <div class="w-[300px] h-[360px] bg-softBeige flex items-center justify-center overflow-hidden rounded-sm border border-primary/10">
+                <div class="w-[220px] h-[260px] sm:w-[300px] sm:h-[360px] bg-softBeige flex items-center justify-center overflow-hidden rounded-sm border border-primary/10">
                   <img
                     src="assets/images/achievements/hackathon_achievement.svg"
                     alt="Hackathon Prize Ceremony"
@@ -749,8 +749,8 @@
             </div>
 
             <!-- Slide 2: SRMC & Club Leadership -->
-            <div class="feedback-slide min-w-full grid grid-cols-1 lg:grid-cols-[1.4fr_0.6fr] gap-16 items-center">
-              <div class="max-w-2xl relative pt-16 pl-16">
+            <div class="feedback-slide min-w-full grid grid-cols-1 lg:grid-cols-[1.4fr_0.6fr] gap-12 lg:gap-16 items-center">
+              <div class="max-w-2xl relative pt-6 sm:pt-8 lg:pt-16 pl-4 sm:pl-8 lg:pl-16">
                 <div class="relative inline-block">
                   <!-- Opening Quote -->
                   <span class="absolute -top-14 -left-14 text-[120px] leading-none text-primary/20 z-20 pointer-events-none">
@@ -771,7 +771,7 @@
               </div>
 
               <div class="flex justify-end">
-                <div class="w-[300px] h-[360px] bg-softBeige flex items-center justify-center overflow-hidden rounded-sm border border-primary/10">
+                <div class="w-[220px] h-[260px] sm:w-[300px] sm:h-[360px] bg-softBeige flex items-center justify-center overflow-hidden rounded-sm border border-primary/10">
                   <img
                     src="assets/images/achievements/leadership_activities.svg"
                     alt="Student Leadership Activities"
@@ -1123,7 +1123,11 @@
       let resizeTimer;
       window.addEventListener('resize', () => {
         clearTimeout(resizeTimer);
-        resizeTimer = setTimeout(updateSlider, 100);
+        resizeTimer = setTimeout(() => {
+          updateSlider();
+          updateGallerySlider();
+          updateFeedbackSlider();
+        }, 100);
       });
 
       let feedbackIdx = 0;
@@ -1151,9 +1155,12 @@
 
       function updateGallerySlider() {
         if (!gallerySlider || gallerySlides.length === 0) return;
-        const offset = -galleryIdx * 100;
-        gallerySlider.style.transform = `translateX(${offset}%)`;
-        
+        // Compute pixel offset to account for gaps between slides (avoid cut-off on mobile)
+        const gap = getSliderGap();
+        const slideWidth = gallerySlides[0].offsetWidth;
+        const offset = -galleryIdx * (slideWidth + gap);
+        gallerySlider.style.transform = `translateX(${offset}px)`;
+
         // Update counter
         if (galleryCounter) {
           galleryCounter.textContent = `${galleryIdx + 1} / ${gallerySlides.length}`;
