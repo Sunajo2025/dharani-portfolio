@@ -629,7 +629,7 @@
                     <img 
                       src="assets/images/gallery/Screenshot%202026-07-05%20135711.png" 
                       alt="Event Moment 1" 
-                      class="w-full h-full object-cover hover:scale-105 transition-transform duration-500"
+                      class="w-full h-full object-contain sm:object-cover hover:scale-105 transition-transform duration-500"
                     />
                   </div>
                 </div>
@@ -642,7 +642,7 @@
                     <img 
                       src="assets/images/gallery/WhatsApp%20Image%202026-07-05%20at%2011.25.16%20AM%20(1).jpeg" 
                       alt="Event Moment 2" 
-                      class="w-full h-full object-cover hover:scale-105 transition-transform duration-500"
+                      class="w-full h-full object-contain sm:object-cover hover:scale-105 transition-transform duration-500"
                     />
                   </div>
                 </div>
@@ -655,7 +655,7 @@
                     <img 
                       src="assets/images/gallery/WhatsApp%20Image%202026-07-05%20at%2011.25.16%20AM.jpeg" 
                       alt="Event Moment 3" 
-                      class="w-full h-full object-cover hover:scale-105 transition-transform duration-500"
+                      class="w-full h-full object-contain sm:object-cover hover:scale-105 transition-transform duration-500"
                     />
                   </div>
                 </div>
@@ -668,7 +668,7 @@
                     <img 
                       src="assets/images/gallery/WhatsApp%20Image%202026-07-05%20at%2011.25.17%20AM.jpeg" 
                       alt="Event Moment 4" 
-                      class="w-full h-full object-cover hover:scale-105 transition-transform duration-500"
+                      class="w-full h-full object-contain sm:object-cover hover:scale-105 transition-transform duration-500"
                     />
                   </div>
                 </div>
@@ -699,15 +699,15 @@
 
     <!-- ACHIEVEMENTS & ACTIVITIES SECTION -->
     <section class="bg-background py-16 sm:py-32 border-t border-b border-primary/10 overflow-hidden">
-      <div class="max-w-7xl mx-auto px-6">
-        <!-- Label -->
-        <div class="mb-12 sm:mb-16">
-          <span class="font-body text-xs tracking-[0.3em] text-primary/60 uppercase">
+      <div class="max-w-7xl mx-auto px-6 grid grid-cols-1 lg:grid-cols-[1fr_2.5fr] gap-12 lg:gap-20 items-start">
+        <!-- Left Label -->
+        <div class="pt-2">
+          <span class="font-body text-xs tracking-[0.3em] text-primary/60 uppercase mb-6 block">
             [Achievements & Activities]
           </span>
         </div>
 
-        <!-- Slider Wrapper -->
+        <!-- Right: Slider Wrapper -->
         <div class="relative overflow-hidden">
           <div
             id="feedback-slider"
@@ -738,11 +738,13 @@
 
               <!-- Right Image -->
               <div class="flex justify-end">
-                <img
-                  src="assets/images/achievements/hackathon_achievement.svg"
-                  alt="Hackathon Prize Ceremony"
-                  class="w-[300px] h-[360px] object-cover"
-                />
+                <div class="w-[300px] h-[360px] bg-softBeige flex items-center justify-center overflow-hidden rounded-sm border border-primary/10">
+                  <img
+                    src="assets/images/achievements/hackathon_achievement.svg"
+                    alt="Hackathon Prize Ceremony"
+                    class="w-full h-full object-contain"
+                  />
+                </div>
               </div>
             </div>
 
@@ -769,11 +771,13 @@
               </div>
 
               <div class="flex justify-end">
-                <img
-                  src="assets/images/achievements/leadership_activities.svg"
-                  alt="Student Leadership Activities"
-                  class="w-[300px] h-[360px] object-cover"
-                />
+                <div class="w-[300px] h-[360px] bg-softBeige flex items-center justify-center overflow-hidden rounded-sm border border-primary/10">
+                  <img
+                    src="assets/images/achievements/leadership_activities.svg"
+                    alt="Student Leadership Activities"
+                    class="w-full h-full object-contain"
+                  />
+                </div>
               </div>
             </div>
           </div>
